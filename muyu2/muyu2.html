@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<mate charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>木鱼</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="maomao.js"></script>
+<style>
+#target-image {
+  transition: transform 0.1s;
+}
+.box {
+	position: absolute; /* 设置为absolute进行绝对定位 */
+	top: 85px; /* 距离顶部50像素 */
+	left: 975px; /* 距离左侧20像素 */
+	width: 520px; /* 设置宽度 */
+	height: 400px; /* 设置高度 */
+}
+.node {
+	position: absolute; /* 设置为absolute进行绝对定位 */
+	top: 180px; /* 距离顶部50像素 */
+	left: 150px; /* 距离左侧20像素 */
+	width: 520px; /* 设置宽度 */
+	height: 400px; /* 设置高度 */
+}
+</style>
+</head>
+<body>
+	<main id="board">
+		<div class="maomao">
+		<img id="trigger-image" src="http://private-user-images.githubusercontent.com/169772963/358177502-878d8d52-5e35-432a-b6d7-70bf81a8eae0.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjM3MTM1OTQsIm5iZiI6MTcyMzcxMzI5NCwicGF0aCI6Ii8xNjk3NzI5NjMvMzU4MTc3NTAyLTg3OGQ4ZDUyLTVlMzUtNDMyYS1iNmQ3LTcwYmY4MWE4ZWFlMC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwODE1JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDgxNVQwOTE0NTRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iMWZhYjA4NTRlNDAzNjI1YjUxYzdlOWM3MTkwNjc4YTk1MTkzOWJjMzg0YmExYjM3Y2FjNjEyMDBjY2JmMDU4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.-hO3lgQudWAkAigC9XtQ7AurAOS12LH7Yub0AyqUc2Q" alt="Trigger Image"   onclick="rotateImage(),addMerit()" class="center-image">
+		<img id="target-image" src="http://private-user-images.githubusercontent.com/169772963/358177276-80dd9509-6085-49b7-a728-eefc5e373b5e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjM3MTM1MzQsIm5iZiI6MTcyMzcxMzIzNCwicGF0aCI6Ii8xNjk3NzI5NjMvMzU4MTc3Mjc2LTgwZGQ5NTA5LTYwODUtNDliNy1hNzI4LWVlZmM1ZTM3M2I1ZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwODE1JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDgxNVQwOTEzNTRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xYWE1YTcyOGM4YjNkMmQ1YmFkYWFlZTBhZjJiYTM2MjMyMDIwNjJjOTMxNzAxZGY1MWU2YWNmNjI0ZWVjYzUwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.98LsI7nt2LQBYQNM0aCmdj2O40d5dSW_gkfu6cgzXEg" alt="Target Image" class="box">
+			<div id="merit" style="display: none;" class="node">
+			<p class="big">好心情+1</p>
+			<p class="medium">好运+1</p>
+			<p class="small">烦恼-1</p>
+		</div>
+	</div>
+	</main>						
+<script>
+function rotateImage() {
+  var targetImage = document.getElementById('target-image');
+  targetImage.style.transform = 'rotate(-65deg)'; 
+  
+  setTimeout(function() {
+    targetImage.style.transform = 'none'; 
+  }, 100);
+}
+</script>
+</body>
+</html>
